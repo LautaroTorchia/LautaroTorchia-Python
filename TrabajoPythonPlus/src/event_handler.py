@@ -32,7 +32,7 @@ def boton_paises_criterio_1(event):
     ese rango"""
     
     if event=="-CHOOSE DATASET1-":
-        with open(os.path.join(os.getcwd(),f'TrabajoPythonPlus{os.sep}datasets{os.sep}countries.csv')) as info_paises:
+        with open(os.path.join(os.getcwd(),f'TrabajoPythonPlus{os.sep}datasets{os.sep}countries.csv'),"r") as info_paises:
             csv_reader=csv.reader(info_paises,delimiter=",")
             next(csv_reader) #Salteamos el encabezado
             lista_paises=(list(map(lambda x:{"Country":x[0],"Population":int(x[2])},csv_reader))) #Conseguimos los datos que nos interesan( poblacion y nombre del pais)
@@ -61,7 +61,7 @@ def boton_paises_criterio_2(event):
     mortalidad"""
     
     if event=="-CHOOSE DATASET1 VERSION2-":
-        with open(os.path.join(os.getcwd(),f'TrabajoPythonPlus{os.sep}datasets{os.sep}countries.csv')) as info_paises:
+        with open(os.path.join(os.getcwd(),f'TrabajoPythonPlus{os.sep}datasets{os.sep}countries.csv'),"r") as info_paises:
             csv_reader=csv.reader(info_paises,delimiter=",")
             next(csv_reader) #Salteamos el encabezado
             lista_paises=(list(map(chequear_mortalidad,csv_reader)))
@@ -70,14 +70,14 @@ def boton_paises_criterio_2(event):
 
 
 def boton_3_criterio_1(event):
-    """Esta funcion permite que en el caso de que se utilice el boton 3, se itere el archivo csv de felicidad y consiga una lista con
-    2 items especificos que son el nombre del pais y su score de felicidad para luego mandarlo a un archivo json cortando los 10 
-    paises con mayor felicidad del mundo"""
+    """Esta funcion permite que en el caso de que se utilice el boton 3, se itere el archivo csv de juegos y consiga una lista con
+    2 items especificos que son el nombre del juego y su cantidad de descargas para luego mandarlo a un archivo json cortando los 10 
+    juegos con mas descargas"""
     
     if event=="-CHOOSE DATASET2-":
-        with open(os.path.join(os.getcwd(),f'TrabajoPythonPlus{os.sep}datasets{os.sep}world-happiness-report.csv')) as info_Happiness:
-            csv_reader=csv.reader(info_Happiness,delimiter=",")
+        with open(os.path.join(os.getcwd(),f'TrabajoPythonPlus{os.sep}datasets{os.sep}android-games.csv'),"r",encoding="UTF-8") as info_Games:
+            csv_reader=csv.reader(info_Games,delimiter=",")
             next(csv_reader) #Salteamos el encabezado
-            lista_happiness=(list(map(lambda x:{"Country":x[0],"Happines score":float(x[4])},csv_reader)))
+            lista_juegos=(list(map(lambda x:{"Game":x[1],"Total Installs":int(x[2])},csv_reader)))
             
-            mandar_a_json((sorted(lista_happiness,key=lambda x:x["Happines score"],reverse=True))[:10]) #Mandamos los 10 paises mas felices
+            mandar_a_json((sorted(lista_juegos,key=lambda x:x["Total Installs"],reverse=True))[:10]) #Mandamos los 10 paises mas felices

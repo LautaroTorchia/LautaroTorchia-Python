@@ -10,7 +10,7 @@ def loop(window):
             break
         boton_paises_criterio_1(event)  #Utiliza dataset1(rank por poblacion)
         boton_paises_criterio_2(event)  #Utiliza dataset1(rank por mortalidad)
-        boton_3_criterio_1(event)  #Utiliza dataset2(rank por felicidad)
+        boton_3_criterio_1(event)  #Utiliza dataset2(rank por cantidad de descargas)
 
 def start():
     "Inicia la pantalla"

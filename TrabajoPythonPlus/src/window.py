@@ -8,7 +8,7 @@ def build():
         [sg.Text("Que datos analizamos?",font=("Helvetica", 30),justification="center",text_color="blue")],
         [sg.Button("Paises por Poblacion",key="-CHOOSE DATASET1-",size=SIZE,pad=(1,10))],
         [sg.Button("Paises por Mortalidad",key="-CHOOSE DATASET1 VERSION2-",size=SIZE,pad=(1,10))],
-        [sg.Button("Felicidad de la poblacion por pais",key="-CHOOSE DATASET2-",size=SIZE)],
+        [sg.Button("Juegos por cantidad de Descargas",key="-CHOOSE DATASET2-",size=SIZE)],
         [sg.Button("Salir",key="-EXIT-",size=SIZE,pad=(1,60))]
     ]
 
