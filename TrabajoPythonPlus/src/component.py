@@ -8,7 +8,9 @@ def loop(window):
         event, values = window.read()
         if event == sg.WIN_CLOSED:
             break
-        verDatos()
+        boton_paises_criterio_1(event)
+        boton_paises_criterio_2(event)
+        boton_3_criterio_1(event)
 
 def start():
     "Inicia la pantalla"
