@@ -6,11 +6,11 @@ def loop(window):
     "Mantiene la pantalla abierta y captura todos los eventos que ocurren en ella"
     while True:
         event, values = window.read()
-        if event == sg.WIN_CLOSED:
+        if event == sg.WIN_CLOSED or event=="-EXIT-":
             break
-        boton_paises_criterio_1(event)
-        boton_paises_criterio_2(event)
-        boton_3_criterio_1(event)
+        boton_paises_criterio_1(event)  #Utiliza dataset1(rank por poblacion)
+        boton_paises_criterio_2(event)  #Utiliza dataset1(rank por mortalidad)
+        boton_3_criterio_1(event)  #Utiliza dataset2(rank por felicidad)
 
 def start():
     "Inicia la pantalla"

@@ -1,0 +1,19 @@
+Este es el trabajo desarrollado por 100 python Plus
+
+Fue desarrollado unica y exclusivamente por Lautaro Torchia
+
+Utilice para la realizacion del ejercicio 2 Datasets, ambos de paises asi mantenia bien la tematica aunque las funciones
+desarrolladas en la aplicacion pueden ser utilizadas para cualquier dataset.
+
+Dejo los links a los 2 datasets para que puedas ver su licencia y utilizar su contenido!
+
+Dataset1 de analisis de paises= https://www.kaggle.com/fernandol/countries-of-the-world   ----> Utilizado en 2 botones de la aplicacion
+Dataset2 de reporte de felicidad segun el pais: https://www.kaggle.com/ajaypalsinghlo/world-happiness-report-2021  ----> Utilizado en un boton
+
+Ambos Dataset son de licencia COC public Domain por lo que no tienen copyright, dejo link a lincencia:
+https://creativecommons.org/publicdomain/zero/1.0/
+
+Para ejecutar la aplicacion se debe ejecutar el archivo Ejercicio.py, ya sea directamente o atraves de la linea de comandos
+
+
+Espero que te guste Profe, decime tu feedback y espero poder sacarme esos 100 python Plus

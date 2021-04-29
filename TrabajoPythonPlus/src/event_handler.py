@@ -70,10 +70,14 @@ def boton_paises_criterio_2(event):
 
 
 def boton_3_criterio_1(event):
+    """Esta funcion permite que en el caso de que se utilice el boton 3, se itere el archivo csv de felicidad y consiga una lista con
+    2 items especificos que son el nombre del pais y su score de felicidad para luego mandarlo a un archivo json cortando los 10 
+    paises con mayor felicidad del mundo"""
+    
     if event=="-CHOOSE DATASET2-":
-        with open(os.path.join(os.getcwd(),f'TrabajoPythonPlus{os.sep}datasets{os.sep}world-happiness-report.csv')) as info_Universities:
-            csv_reader=csv.reader(info_Universities,delimiter=",")
+        with open(os.path.join(os.getcwd(),f'TrabajoPythonPlus{os.sep}datasets{os.sep}world-happiness-report.csv')) as info_Happiness:
+            csv_reader=csv.reader(info_Happiness,delimiter=",")
             next(csv_reader) #Salteamos el encabezado
-            lista_juegos=(list(map(lambda x:{"Country":x[0],"Happines score":float(x[4])},csv_reader)))
+            lista_happiness=(list(map(lambda x:{"Country":x[0],"Happines score":float(x[4])},csv_reader)))
             
-            mandar_a_json((sorted(lista_juegos,key=lambda x:x["Happines score"],reverse=True))[:10]) #Mandamos los 10 juegos mas descargados
+            mandar_a_json((sorted(lista_happiness,key=lambda x:x["Happines score"],reverse=True))[:10]) #Mandamos los 10 paises mas felices
